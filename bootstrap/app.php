@@ -23,9 +23,12 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-$app->withFacades();
+ $app->withFacades();
 
-$app->withEloquent();
+ $app->withEloquent();
+
+
+ $app->configure('database');
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +80,7 @@ $app->middleware([
 ]);
 
 // $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
+//     'auth' => App\Http\Middleware\AuthenticateAccess::class,
 // ]);
 
 /*
